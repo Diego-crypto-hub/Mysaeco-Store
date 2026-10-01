@@ -16,4 +16,4 @@ O projeto foca-se numa estética minimalista e natural, utilizando uma paleta de
 1. Certifica-te de que tens o **Go** instalado no teu sistema.
 2. Clona este repositório:
    ```bash
-  
+   git clone [https://github.com/Diego-crypto-hub/mysaeco-store.git](https://github.com/Diego-crypto-hub/mysaeco-store.git)
