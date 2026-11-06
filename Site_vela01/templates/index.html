@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>MYSAECO | Velas Artesanais</title>
+    <title>MYSAECO | Velas Artesanais - Especial de Natal</title>
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -12,13 +12,19 @@
     <style>
         :root {
             /* Fundo Off-White mais quente e aconchegante */
-            --bg-color: #F4EFEA;
+            --bg-color: #F8F5F0;
             --card-bg: #FFFFFF;
             --text-primary: #1F1E1D;
             --text-secondary: #5C5855;
-            /* Verde mais vivo e marcante para dar vida à loja */
-            --brand-green: #5B7452;
-            --brand-green-hover: #485D41;
+            
+            /* Verde Pinheiro (mais escuro e elegante para o Natal) */
+            --brand-green: #3A5340;
+            --brand-green-hover: #2B3D2F;
+            
+            /* Tons sutis festivos */
+            --brand-gold: #B38B59;
+            --brand-red: #8B3A3A;
+            
             --border-color: #E2DBD2;
             --shadow-subtle: 0 10px 30px rgba(31, 30, 29, 0.05);
             --shadow-hover: 0 20px 40px rgba(31, 30, 29, 0.1);
@@ -39,6 +45,18 @@
             -webkit-font-smoothing: antialiased;
             overflow-x: hidden;
         }
+        
+        /* Banner de Natal Sutil */
+        .holiday-banner {
+            background-color: var(--brand-green);
+            color: #F8F5F0;
+            text-align: center;
+            padding: 8px 5%;
+            font-size: 0.75rem;
+            letter-spacing: 1.5px;
+            font-weight: 400;
+            text-transform: uppercase;
+        }
 
         /* Header */
         header {
@@ -47,7 +65,7 @@
             align-items: center;
             width: 100%;
             padding: 1.2rem 5%;
-            background-color: var(--bg-color);
+            background-color: rgba(248, 245, 240, 0.95);
             border-bottom: 1px solid var(--border-color);
             position: sticky;
             top: 0;
@@ -74,7 +92,7 @@
             object-fit: cover;
             object-position: center;
             border-radius: 50%;
-            box-shadow: 0 4px 12px rgba(91, 116, 82, 0.2);
+            box-shadow: 0 4px 12px rgba(58, 83, 64, 0.2);
             transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1);
         }
 
@@ -100,7 +118,7 @@
             font-size: 0.7rem;
             letter-spacing: 2.5px;
             text-transform: uppercase;
-            color: var(--text-secondary);
+            color: var(--brand-gold);
             font-weight: 400;
         }
 
@@ -165,8 +183,8 @@
         }
 
         .cart-badge-count {
-            background-color: #FFFFFF;
-            color: var(--brand-green);
+            background-color: var(--brand-red); /* Tom de vinho elegante para o Natal */
+            color: #FFFFFF;
             font-size: 0.7rem;
             font-weight: 700;
             padding: 1px 6px;
@@ -182,7 +200,7 @@
             text-align: center;
             padding: 5rem 2rem;
             border-radius: 16px;
-            box-shadow: 0 20px 40px rgba(91, 116, 82, 0.2);
+            box-shadow: 0 20px 40px rgba(58, 83, 64, 0.2);
             opacity: 0;
             transform: translateY(30px);
             animation: fadeInUp 1s cubic-bezier(0.16, 1, 0.3, 1) 0.2s forwards;
@@ -234,6 +252,12 @@
             font-weight: 500;
             box-shadow: var(--shadow-subtle);
             transition: all 0.3s ease;
+        }
+        
+        .aesthetic-badge.special {
+            border-color: var(--brand-gold);
+            color: var(--brand-green);
+            background-color: transparent;
         }
 
         /* Catálogo */
@@ -295,15 +319,15 @@
             position: absolute;
             top: 15px;
             left: 15px;
-            background: rgba(255, 255, 255, 0.9);
+            background: rgba(255, 255, 255, 0.95);
             backdrop-filter: blur(8px);
             padding: 5px 14px;
             font-size: 0.7rem;
             letter-spacing: 1.5px;
             text-transform: uppercase;
-            color: var(--text-primary);
+            color: var(--brand-gold);
             border-radius: 20px;
-            font-weight: 500;
+            font-weight: 600;
         }
 
         .card-content {
@@ -516,7 +540,7 @@
         .cart-footer {
             padding: 1.8rem;
             border-top: 1px solid var(--border-color);
-            background-color: #F4EFEA;
+            background-color: #F8F5F0;
         }
 
         .cart-total {
@@ -568,7 +592,7 @@
 
         .payment-option-label:hover {
             border-color: var(--brand-green);
-            background-color: rgba(91, 116, 82, 0.04);
+            background-color: rgba(58, 83, 64, 0.04);
         }
 
         .payment-option-label input {
@@ -662,6 +686,11 @@
 </head>
 <body>
 
+    <!-- Faixa Sutil de Natal -->
+    <div class="holiday-banner">
+        ✨ Aconchego para presentear: Frete grátis nas compras acima de R$ 200 ✨
+    </div>
+
     <header>
         <a href="#" class="logo-container">
             <img src="/static/images/logo.jpg" alt="MYSA & co" class="logo-img">
@@ -681,14 +710,14 @@
     </header>
 
     <div class="hero-box">
-        <h1>Momentos de Pura Calma</h1>
-        <p>Velas artesanais desenvolvidas com cera vegetal e pavio de madeira, criadas para transformar o seu espaço num refúgio acolhedor.</p>
+        <h1>Luz & Aconchego neste Natal</h1>
+        <p>Velas artesanais desenvolvidas com cera vegetal e pavio de madeira. O presente perfeito para transformar o seu espaço num refúgio acolhedor durante as festas.</p>
     </div>
 
     <div class="aesthetic-strip">
         <span class="aesthetic-badge">✦ 100% Cera Vegetal Biodegradável</span>
         <span class="aesthetic-badge">✦ Pavio de Madeira Cremoso</span>
-        <span class="aesthetic-badge">✦ Feito à Mão com Rigor</span>
+        <span class="aesthetic-badge special">✦ Presente Ideal</span>
     </div>
 
     <main id="catalogo" class="catalog-container">
@@ -696,7 +725,7 @@
             {{range .}}
             <div class="card">
                 <div class="card-image-wrapper">
-                    <span class="tag-badge">Feito à Mão</span>
+                    <span class="tag-badge">Coleção Festas</span>
                     <img src="{{.Imagem}}" alt="{{.Nome}}">
                 </div>
                 <div class="card-content">
@@ -794,14 +823,24 @@
         </div>
     </div>
 
-    <!-- Modal A Essência -->
+    <!-- Modal A Essência (ATUALIZADO) -->
     <div id="essenceModal" class="modal-overlay" onclick="closeEssenceModal()">
         <div class="modal-content" onclick="event.stopPropagation()">
             <button class="modal-close" onclick="closeEssenceModal()">&times;</button>
-            <h2>A Essência MYSAECO</h2>
-            <p>Cada vela da MYSAECO é concebida artesanalmente com rigor, respeito ambiental e profundo carinho. Utilizamos exclusivamente cera vegetal biodegradável à base de coco, arroz e palma, óleos essenciais de perfumaria fina e pavios de madeira nobre que proporcionam um crepitar suave, lembrando o aconchego de uma lareira acesa.</p>
-            <p>O nosso compromisso é transformar cada ambiente num santuário de paz, elegância e bem-estar através de fragrâncias marcantes que contam histórias e despertam memórias inesquecíveis.</p>
-            <button class="checkout-btn" style="width: auto; padding: 0.65rem 1.5rem;" onclick="closeEssenceModal()">Compreender</button>
+            
+            <!-- Título Centralizado -->
+            <h2 style="text-align: center;">A Essência MYSAECO</h2>
+            
+            <!-- Texto diretamente visível -->
+            <div>
+                <p>Cada vela da MYSAECO é concebida artesanalmente com rigor, respeito ambiental e profundo carinho. Utilizamos exclusivamente cera vegetal biodegradável à base de coco, arroz e palma, óleos essenciais de perfumaria fina e pavios de madeira nobre que proporcionam um crepitar suave, lembrando o aconchego de uma lareira acesa.</p>
+                <p>O nosso compromisso é transformar cada ambiente num santuário de paz, elegância e bem-estar através de fragrâncias marcantes que contam histórias e despertam memórias inesquecíveis.</p>
+                
+                <!-- Botão Centralizado -->
+                <div style="text-align: center; margin-top: 2rem;">
+                    <button class="checkout-btn" style="width: auto; padding: 0.65rem 2.5rem;" onclick="closeEssenceModal()">Compreender</button>
+                </div>
+            </div>
         </div>
     </div>
 
@@ -933,10 +972,13 @@
             setTimeout(() => modal.style.display = 'none', 300);
         }
 
+        // Script de abertura e fechamento do Modal "A Essência" simplificado (sem atraso de animação)
         function openEssenceModal() {
             const modal = document.getElementById('essenceModal');
             modal.style.display = 'flex';
-            setTimeout(() => modal.classList.add('active'), 10);
+            setTimeout(() => {
+                modal.classList.add('active');
+            }, 10);
         }
 
         function closeEssenceModal() {
