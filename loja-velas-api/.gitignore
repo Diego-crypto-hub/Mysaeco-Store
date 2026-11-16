@@ -1,0 +1,9 @@
+target/
+.idea/
+*.iml
+.vscode/
+*.log
+.DS_Store
+config-local.properties
+database/criar_usuario_api.sql
+database/setup_banco.sql
